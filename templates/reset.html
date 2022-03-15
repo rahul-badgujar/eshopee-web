@@ -1,0 +1,28 @@
+{%extends "user.html" %}
+{% block title %}
+Reset Password
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+<div class="row">
+    <div class="col"></div>
+<div class=" display col-lg-4 col-md-7 col-sm-8  ">
+<h1  class="fw-bold">Forgot Password</h1>
+<h2 class="">Please enter your email and we will send you a link to return to your account</h2>
+
+<form method="post">
+    {{form.csrf_token }}
+    {{form.email.label}}<br>
+    {{form.email (class_='box', type='email', placeholder='enter your email')}}<br>
+    {%for err in form.email.errors%}
+    <span class="err">{{err}}</span>
+    {%endfor%}<br>
+    {{form.submit (class_="box btn btn-danger ", type="submit" )}}
+</form>
+    <p>Dont have an account ? <a href="/signup">Sign Up</a></p>
+
+        </div>
+    <div class="col"></div>
+    </div>
+</div>
+{% endblock %}

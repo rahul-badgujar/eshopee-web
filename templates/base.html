@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> ESHOPEE </title>
+
+<!--  bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<!--    google_fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@700&family=Changa:wght@700&display=swap" rel="stylesheet">
+
+<!--home.css-->
+    <link rel="stylesheet" href="static/home.css">
+
+<!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+</head>
+<body>
+<nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid ">
+    <a class="navbar-brand" href="/home">E-SHOPEE </a>
+    <button class="navbar-toggler  " type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"><i class="fas fa-align-justify" style="font-size:28px;"></i></span>
+    </button>
+
+    <div class="collapse navbar-collapse " id="navbarScroll">
+
+      <ul class="navbar-nav my-2 my-lg-0 navbar-nav-scroll ms-auto" style="--bs-scroll-height: 400px;">
+          <li class="nav-item dropdown"><P class="emoji">👦</P>
+          <a class="nav-link dropdown-toggle " href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            ‍‍My Account
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+              <li><h4 class="dropdown-item">{{ username }}</h4></li>
+              <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Change Number</a></li>
+            <li><a class="dropdown-item" href="#">Change Email</a></li>
+            <li><a class="dropdown-item" href="#">Change Password</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="#">🎁My Orders</a></li>
+          </ul>
+        </li>
+          <li class="nav-item "><P class="emoji">👨‍💼</P>
+          <a class="nav-link" href="{{ url_for('add_card') }}">Sell Product</a>
+        </li>
+          <li class="nav-item"><P class="emoji">😎</P>
+          <a class="nav-link" href="#">About Developer</a>
+        </li>
+          <li class="nav-item"><P class="emoji">💻</P>
+          <a class="nav-link" href="{{ url_for('logout') }}">Log Out</a>
+        </li>
+      </ul>
+    </div>
+    </div>
+</nav>
+    <form class="search-bar container-fluid d-flex me-auto">
+        <input class="search form-control" type="search" placeholder="Search Product"  aria-label="Search">
+        <button class="search-btn btn btn-danger" type="submit">Search</button>
+    </form>
+
+{% block content %}
+{% endblock %}
+
+<!--pagination-->
+<div class="section container-fluid">
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" href="/home" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="/space_store">1</a></li>
+    <li class="page-item"><a class="page-link" href="/mobiles">2</a></li>
+    <li class="page-item"><a class="page-link" href="/electronics">3</a></li>
+    <li class="page-item"><a class="page-link" href="makeup">4</a></li>
+    <li class="page-item"><a class="page-link" href="kitchen">5</a></li>
+    <li class="page-item">
+      <a class="page-link" href="/computer" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+</div>
+
+<!--footer-->
+  <footer class="footer" id="footer">
+    <section class="row">
+    <div class="section container-fluid col">
+      <h3></h3>
+      <button class="download-button btn btn-lg btn-dark ms-auto" type="button"><i class="fab fa-apple"></i> Download</button>
+      <button class="download-button btn btn-lg btn-light ml-auto" type="button"><i class="fab fa-google-play"></i> Download</button>
+    </div>
+    <div class="section container-fluid col">
+      <i class="social-icon fab fa-facebook-f"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon fas fa-envelope"></i>
+      <p>@ copyright 2021</p> <p> E-SHOPEE</p>
+    </div>
+      </section>
+  </footer>
+</body>
+</html>
+
+
+
+
+

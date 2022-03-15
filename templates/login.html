@@ -1,0 +1,47 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{%extends "user.html" %}
+{% block title %}
+Login
+{% endblock %}
+{% block content %}
+    <div class="container-fluid">
+
+    <div class="row">
+<div class=" col-lg-4 col-sm-12">
+        <img class=" title-image" src="static/images/design.png">
+    </div>
+<div class="display col  col-lg-4 col-sm-12 ">
+    <h1 class="logo fw-bold">E-SHOPEE </h1>
+        <h2 class="signin">Sign in with your email and password</h2>
+
+        {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+         <h5>{{ message }}</h5>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+<form action="{{ url_for('login') }}" method="post">
+    {{ form.csrf_token }}
+    {{form.email.label}}<br>
+    {{form.email (class_='box', type='email', placeholder='enter your email')}}<br>
+    {%for err in form.email.errors%}
+    <span class="err">{{err}}</span>
+    {%endfor%}<br>
+    {{form.password.label}}<br>
+    {{form.password (class_="box" ,type="password", placeholder="enter your password")}}<br>
+    {%for err in form.password.errors%}
+    <span class="err">{{err}}</span >
+    {%endfor%}<br><br>
+    <a  class="fplink" href="/reset">Forgot Password</a><br>
+    {{form.submit (class_="box btn btn-danger ", type="submit" )}}
+</form>
+    <p>Dont have an account ? <a href="/signup">Sign Up</a></p>
+    </div>
+    <div class="col col-lg-4 col-sm-12">
+        <img class=" title-image" src="static/images/shop.png">
+    </div>
+    </div>
+    </div>
+{% endblock %}

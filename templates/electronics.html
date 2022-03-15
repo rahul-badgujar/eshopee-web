@@ -1,0 +1,110 @@
+{%extends "base.html" %}
+{%block content%}
+
+<h2 class="section">ELECTRONICS</h2>
+<!--cards-->
+<div class="section container-fluid">
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://m.media-amazon.com/images/I/91xnO7qHAeL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">Panasonic LUMIX G7   </h4>
+        <p class="card-text"><ul>
+        <li>14-42 mm Lens (Black)</li>
+        <li>16.00 MP 4K Mirrorless Interchangeable Lens Camera Kit</li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: 40,999 Rs.</li>
+        <li class="offer">Best Offer: 38,999 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+    <div class="col">
+    <div class="card h-100">
+      <img src="https://m.media-amazon.com/images/I/71o8Q5XJS5L._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">Sony WH-1000XM4 </h4>
+        <p class="card-text"><ul><li>30 Hrs Battery</li>
+        <li>Industry Leading Wireless Noise Cancellation Headphones</li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: 25,999 Rs.</li>
+        <li class="offer">Best Offer: 23,999 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+    <div class="col">
+    <div class="card h-100">
+      <img src="https://m.media-amazon.com/images/I/71deZZ0oDMS._AC_SS450_.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">Mi TV </h4>
+        <p class="card-text"><ul><li>125.7 cm (50 Inches)</li>
+        <li>4K Ultra HD Android Smart LED TV 4X|L50M5-5AIN (Black)</li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: 18,999 Rs.</li>
+        <li class="offer">Best Offer: 17,999 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+    <div class="col">
+    <div class="card h-100">
+      <img src="https://m.media-amazon.com/images/I/71W+RrSPINL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">Apple Watch Series 7 </h4>
+        <p class="card-text"><ul><li>GPS + Cellular, 45mm</li>
+        <li>Midnight Aluminium Case with Midnight Sport Band </li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: 18,999 Rs.</li>
+        <li class="offer">Best Offer: 14,999 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+      {% for card in cards %}
+        <div class="col">
+    <div class="card h-100">
+      <img src="{{ card.img_url }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">{{ card.title }} </h4>
+        <p class="card-text"><ul><li>{{ card.specs }} </li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: {{ card.price }} Rs.</li>
+        <li class="offer">Best Offer: {{ card.offer }} Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+
+{% endblock %}

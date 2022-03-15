@@ -1,0 +1,109 @@
+{%extends "base.html" %}
+{%block content%}
+
+<h2 class="section">COMPUTER ACCESSORIES</h2>
+<!--cards-->
+<div class="section container-fluid">
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://images-eu.ssl-images-amazon.com/images/I/41lHjIo2eYL._AC_SX184_.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">Lenovo Legion M200 </h4>
+        <p class="card-text"><ul><li> RGB Gaming Wired USB Mouse GX30P93886</li>
+        <li> upto 2400 DPI with 4 levels DPI switch</li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: 999 Rs.</li>
+        <li class="offer">Best Offer: 599 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+    <div class="col">
+    <div class="card h-100">
+      <img src="https://images-eu.ssl-images-amazon.com/images/I/2129Fx+DUpL._AC_SX184_.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">Vulcan RGB Headphone Stand  </h4>
+        <p class="card-text"><ul><li>Mouse Bungee and 4 Port USB 2.0 HUB</li>
+        <li> with RGB Touch Control Button (Black)</li>
+       </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+         <li class="price">Price: 1,499 Rs.</li>
+        <li class="offer">Best Offer: 2,399 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+    <div class="col">
+    <div class="card h-100">
+      <img src="https://vaspinfotech.biz/wp-content/uploads/2021/05/16.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">Zebronics Speaker </h4>
+        <p class="card-text"><ul><li>Zeb-Warrior 2.0 Multimedia Speaker</li>
+        <li>with Aux Connectivity,USB Powered and Volume Control</li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: 2,499 Rs.</li>
+        <li class="offer">Best Offer: 1,199 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+    <div class="col">
+    <div class="card h-100">
+      <img src="https://www.westerndigital.com/content/dam/store/en-us/assets/products/memory-cards/extreme-pro-uhs-i-microsd/gallery/extreme-pro-uhs-i-microsd-1tb.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">SanDisk microSD Card </h4>
+        <p class="card-text"><ul><li>® Extreme microSD Card for Mobile Gaming </li>
+        <li>1 TB</li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: 1,999 Rs.</li>
+        <li class="offer">Best Offer: 1,599 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+      {% for card in cards %}
+        <div class="col">
+    <div class="card h-100">
+      <img src="{{ card.img_url }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">{{ card.title }} </h4>
+        <p class="card-text"><ul><li>{{ card.specs }} </li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: {{ card.price }} Rs.</li>
+        <li class="offer">Best Offer: {{ card.offer }} Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+
+{% endblock %}

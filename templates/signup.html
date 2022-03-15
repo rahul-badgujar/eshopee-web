@@ -1,0 +1,43 @@
+{%extends "user.html" %}
+{% block title %}
+Sign up
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+<div class="row">
+    <div class="col"></div>
+<div class="display col-lg-4 col-md-7 col-sm-8  ">
+<h1 class="fw-bold">Register Account</h1>
+<h2 class="">Complete your details or continue with social media</h2>
+
+<form action="{{ url_for('signup') }}" method="post">
+        {{ form.csrf_token }}
+    {{form.username.label}}<br>
+    {{form.username (class_='box', type='text', placeholder='Username')}}<br>
+
+    {{ form.csrf_token }}
+    {{form.email.label}}<br>
+    {{form.email (class_='box', type='email', placeholder='enter your email')}}<br>
+
+    {{form.password.label}}<br>
+    {{form.password (class_="box" ,type="password", placeholder="enter your password")}}<br>
+    {%for err in form.password.errors %}
+    <span class="err">{{err}}</span>
+    {%endfor%}<br>
+
+    {{form.confirm.label}}<br>
+    {{form.confirm (class_="box" ,type="password", placeholder="confirm your password")}}<br>
+    {%for err in form.confirm.errors%}
+    <span class="err">{{err}}</span>
+    {%endfor%}<br>
+
+    {{form.submit (class_="box btn btn-danger ", type="submit" )}}
+</form>
+
+    <p>By continuing your confirm that you agree with our terms and conditions</p>
+
+        </div>
+    <div class="col"></div>
+    </div>
+</div>
+{% endblock %}

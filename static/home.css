@@ -1,0 +1,179 @@
+body {
+  font-family: 'Cairo', sans-serif;
+  text-align: center;
+  background-color: #F7E8F6;
+
+}
+ul{
+list-style-type: none ;
+  margin: 0;
+  padding: 0;
+}
+li{
+list-style-type: none ;
+}
+h2{
+margin: 2% 0;
+font-family: 'Changa', sans-serif;
+color: #000000;
+font-weight:bold;
+font-size: 250%;
+}
+a {
+  color: #000000;
+  text-decoration: none;
+}
+a:hover  {
+  font-weight: bold;
+  color: #FF467E;
+}
+.navbar {
+  padding: 3% 0 2% 0;
+  margin: 0 0 2% 0;
+}
+.navbar-brand{
+font-family: 'Changa', sans-serif;
+color: #F12B6B;
+font-weight:bold;
+font-size: 400%;
+}
+.navbar-brand:hover{
+font-family: 'Changa', sans-serif;
+color: #F12B6B;
+font-weight:bold;
+}
+.navbar-toggler{
+color:#F12B6B;
+border-style:solid;
+border-width:2px;
+border-color:#F12B6B;
+}
+.navbar-toggler-icon{
+color:#F12B6B;
+}
+.nav-link {
+    font-size: 120%;
+    color: #000000;
+}
+.nav-link:hover {
+    color: #FF467E;
+    font-weight: bold;
+
+}
+.emoji{
+font-size: 200%;
+margin: 0;
+}
+.btn{
+  border-width: 3.5px;
+  border-style: outset;
+}
+.search {
+    border-color: #FF467E;
+    margin: 0 1% 0 1% ;
+    border-style: inset;
+    border-width: 4px;
+}
+.search-btn{
+background-color: #FF467E;
+}
+
+.search-btn:hover{
+background-color: #F12B6B;
+}
+.container-fluid{
+  padding: 0 10%;
+}
+.circle_img {
+  border-width: 4px;
+  border-color: #FF467E;
+  border-style: outset;
+  border-radius: 100%;
+}
+.circle_img:hover {
+  border-style: solid;
+}
+.strip {
+  padding: 50px 0;
+}
+.classification {
+ padding-top: 10%;
+ font-size: 110%;
+
+}
+.classification:hover {
+  font-weight: bold;
+}
+.section {
+  padding: 2% 6%;
+}
+.carousel-img {
+  border-color: #FF467E;
+  border-style: double;
+  border-width: 5px;
+  height:500px ;
+  width: 100%;
+}
+.card {
+  height: 800px;
+  width: 100%;
+  border-color: #FF467E;
+  background-color: #FFFFFF ;
+  border-style: double;
+  border-width: 3.5px;
+  margin: 1% ;
+
+}
+.card:hover {
+  border-style: outset;
+  border-width: 6px;
+}
+.card-img-top{
+  padding-top: 8%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 250px;
+  width: 150px;
+}
+.card-title{
+font-family: 'Changa', sans-serif;
+font-weight:bold;
+font-size: 1.8rem;
+}
+.price {
+color:#F12B6B;
+margin: 5% 0;
+font-weight:bold;
+font-size: 1.2rem;
+
+}
+.offer{
+color:#0F0E0E;
+font-weight:bold;
+font-size: 1.5rem;
+margin: 5% 0;
+}
+.page-link {
+    color: #000000;
+}
+.page-link:hover {
+    background-color: #F6C7C7;
+    color: #FF467E;
+   }
+
+#footer {
+    padding: 20px 20px;
+    background-color: #F12B6B;
+
+}
+
+.social-icon {
+  font-size: 2rem;
+  margin: 20px 10px;
+
+}
+
+.download-button {
+  margin: 3% 2% ;
+}
+

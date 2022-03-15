@@ -1,0 +1,105 @@
+{%extends "base.html" %}
+{%block content%}
+
+<h2 class="section">SPACE STORE</h2>
+<!--cards-->
+<div class="section container-fluid">
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://i.pinimg.com/originals/80/a3/1a/80a31ad9ad65de19df08690177a2abb8.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title"> Apollo 15-17 EMU</h4>
+        <p class="card-text"><ul><li>Manufacturer: ILC Dover</li>
+        <li>Operating Pressure: 3.7 psi (25.5 kPa)</li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: 60,999 Rs.</li>
+        <li class="offer">Best Offer: 57,999 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+      </div>
+    </div>
+    </div>
+      <div class="col">
+    <div class="card h-100">
+      <img src="https://nineplanets.org/wp-content/uploads/2020/06/No-Man%E2%80%99s-Sky.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">No Man's Sky</h4>
+        <p class="card-text"><ul><li>Top Selling Game</li>
+        <li>Experience infinite freedom</li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: 4,999 Rs.</li>
+        <li class="offer">Best Offer: 3,999 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+      </div>
+    </div>
+    </div>
+    <div class="col">
+    <div class="card h-100">
+      <img src="https://m.media-amazon.com/images/I/81w9p5e3GJS._AC_SL1500_.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title"> Space Shuttle</h4>
+        <p class="card-text"><ul><li>For Kids</li>
+        <li>Best Educational Toy</li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: 2,999 Rs.</li>
+        <li class="offer">Best Offer: 999 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+      </div>
+    </div>
+    </div>
+    <div class="col">
+    <div class="card h-100">
+      <img src="https://images-na.ssl-images-amazon.com/images/I/51avt2zrmIL._SX322_BO1,204,203,200_.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title"> The Case for Space</h4>
+        <p class="card-text"><ul><li>Author: Robert Zubrin</li>
+        <li>Category: Nonfiction</li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: 999 Rs.</li>
+        <li class="offer">Best Offer: 579 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+      </div>
+    </div>
+    </div>
+    {% for card in cards %}
+        <div class="col">
+    <div class="card h-100">
+      <img src="{{ card.img_url }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">{{ card.title }} </h4>
+        <p class="card-text"><ul><li>{{ card.specs }} </li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: {{ card.price }} Rs.</li>
+        <li class="offer">Best Offer: {{ card.offer }} Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+    {% endfor %}
+
+</div>
+</div>
+
+{% endblock %}

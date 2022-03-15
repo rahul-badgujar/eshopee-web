@@ -1,0 +1,108 @@
+{%extends "base.html" %}
+{%block content%}
+
+<h2 class="section">MOBILES</h2>
+<!--cards-->
+<div class="section container-fluid">
+
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+  <div class="col">
+    <div class="card h-100">
+      <img src="https://m.media-amazon.com/images/I/71i2XhHU3pL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">Apple iPhone 11 </h4>
+        <p class="card-text"><ul><li>256GB - Black</li>
+        <li>A13 Bionic chip with third-generation Neural Engine</li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: 64,999 Rs.</li>
+        <li class="offer">Best Offer: 60,999 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+    <div class="col">
+    <div class="card h-100">
+      <img src="https://m.media-amazon.com/images/I/71QE00iB9IL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">Apple iPhone 11 </h4>
+        <p class="card-text"><ul><li>64GB - White</li>
+        <li>A13 Bionic chip with third-generation Neural Engine</li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: 50,999 Rs.</li>
+        <li class="offer">Best Offer: 47,999 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+    <div class="col">
+    <div class="card h-100">
+      <img src="https://m.media-amazon.com/images/I/61LvUvbZGlL._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">One Plus 9 pro 5G</h4>
+        <p class="card-text"><ul><li>Snapdragon 888</li>
+        <li>Best Selling Smartphone</li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: 60,999 Rs.</li>
+        <li class="offer">Best Offer: 57,999 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+    <div class="col">
+    <div class="card h-100">
+      <img src="https://m.media-amazon.com/images/I/81B0HJigO-L._AC_UL480_FMwebp_QL65_.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">Redmi Note 10S</h4>
+        <p class="card-text"><ul><li>Super Amoled Display</li>
+        <li>Alexa Built In </li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: 18,999 Rs.</li>
+        <li class="offer">Best Offer: 14,999 Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+      {% for card in cards %}
+        <div class="col">
+    <div class="card h-100">
+      <img src="{{ card.img_url }}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">{{ card.title }} </h4>
+        <p class="card-text"><ul><li>{{ card.specs }} </li>
+        </ul>
+        </p>
+      </div>
+      <div class="card-footer">
+        <li class="price">Price: {{ card.price }} Rs.</li>
+        <li class="offer">Best Offer: {{ card.offer }} Rs.</li>
+         <button type="button" class="btn btn-outline-success m-2">Add To Cart</button>
+         <button type="button" class="btn btn-outline-danger m-2">Buy Now</button>
+
+      </div>
+    </div>
+    </div>
+    {% endfor %}
+</div>
+</div>
+
+{% endblock %}

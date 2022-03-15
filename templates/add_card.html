@@ -1,0 +1,45 @@
+{% import "bootstrap/wtf.html" as wtf %}
+{%extends "user.html" %}
+{% block title %}
+Add Product
+{% endblock %}
+{% block content %}
+<div class="container-fluid">
+<div class="row">
+    <div class="col"></div>
+<div class=" display col-lg-4 col-md-7 col-sm-8  ">
+<h1  class="fw-bold">Add Your Product</h1>
+<h2 class="">Fill all fields about product </h2>
+
+<form method="post">
+            {{ form.csrf_token }}
+    {{form.type.label}}<br>
+    {{form.type (class_='box', placeholder='eg.mobiles,space store,home and kitchen ')}}<br>
+        {{ form.csrf_token }}
+    {{form.title.label}}<br>
+    {{form.title (class_='box', placeholder='enter title ')}}<br>
+
+            {{ form.csrf_token }}
+    {{form.img_url.label}}<br>
+    {{form.img_url (class_='box', placeholder='enter img_url')}}<br>
+
+            {{ form.csrf_token }}
+    {{form.specs.label}}<br>
+    {{form.specs (class_='box', placeholder='enter specs')}}<br>
+
+            {{ form.csrf_token }}
+    {{form.price.label}}<br>
+    {{form.price (class_='box', placeholder='enter price')}}<br>
+
+            {{ form.csrf_token }}
+    {{form.offer.label}}<br>
+    {{form.offer (class_='box', placeholder='enter offer price')}}<br>
+    {{form.submit (class_="box btn btn-danger ", type="submit" )}}
+
+</form>
+</div>
+    <div class="col"></div>
+    </div>
+</div>
+
+{% endblock %}
